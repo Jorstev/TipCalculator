@@ -1,0 +1,194 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --Strong_cyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+
+  --Very_dark_cyan: hsl(183, 100%, 15%);
+  --Dark_grayish_cyan: hsl(186, 14%, 43%);
+  --Grayish_cyan: hsl(184, 14%, 56%);
+  --Light_grayish_cyan: hsl(185, 41%, 84%);
+  --Very_light_grayish_cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background: var(--Light_grayish_cyan);
+  font-family: "Space Mono", monospace;
+}
+/* Component App */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Component Title */
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Component TipCalculator */
+.app-container .calculator-container {
+  width: 80vw;
+  height: 70vh;
+  background: var(--White);
+  display: flex;
+}
+
+.app-container .calculator-container button:hover {
+  background: var(--Light_grayish_cyan);
+  border: none;
+  color: var(--Very_dark_cyan);
+}
+
+/* Component TipInput */
+
+.tipInput-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+label {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+.selection-container .input-container input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: var(--Very_light_grayish_cyan);
+  text-align: right;
+  outline: none;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--Very_dark_cyan);
+  width: 100%;
+}
+
+.selection-container .input-container input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.selection-container .input-container .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  color: var(--Light_grayish_cyan);
+  font-size: 1.6rem;
+}
+
+.selection-container {
+  width: 78%;
+}
+
+.tip-selection-container {
+  height: 40%;
+}
+
+.selection-container .tipselection-container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.selection-container .tipselection-container button {
+  width: 30%;
+  height: 55px;
+  font-size: 2.8rem;
+  color: var(--White);
+  background: var(--Very_dark_cyan);
+  border-radius: 5px;
+}
+.selection-container .tipselection-container input {
+  width: 30%;
+  height: 55px;
+  font-size: 2.8rem;
+  background: var(--Very_light_grayish_cyan);
+  border: none;
+  text-align: right;
+  padding: 10px;
+}
+.selection-container .tipselection-container input::placeholder {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Component TipInformativePanel */
+.tipInformativePanel-container {
+  width: 50%;
+  height: 100%;
+  border-radius: 40px;
+  border: 25px solid var(--White);
+  background: var(--Very_dark_cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--White);
+  font-size: 1.8rem;
+}
+.tipInformativePanel-container .tipAmount {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+  align-items: center;
+}
+
+.tipInformativePanel-container .tipAmount-Numbers {
+  font-size: 4.5rem;
+  color: var(--Strong_cyan);
+}
+
+.tipInformativePanel-container .tipReset {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+.tipInformativePanel-container .tipReset button {
+  width: 80%;
+  height: 50px;
+  background: var(--Strong_cyan);
+  color: var(--Very_dark_cyan);
+  font-size: 1.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+
+button.activeBtn {
+  background: var(--Strong_cyan) !important;
+  color: var(--Very_dark_cyan) !important;
+  border: none;
+}
